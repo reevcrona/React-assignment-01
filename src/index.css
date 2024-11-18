@@ -1,8 +1,44 @@
 body{
-  background-color: black;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.4s ease-in-out;
 }
 .game-art-img{
-  width: 50px;
-  height: 50px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  border-radius: 15px;
 }
+.game-art-img:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.container{
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.container:hover > :not(:hover){
+  opacity: 0.5;
+  transform: scale(0.8);
+  
+
+}
+.game-card-container{
+  transition: all 0.3s ease-in-out;
+}
+
