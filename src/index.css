@@ -6,7 +6,6 @@ body{
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,6 +31,7 @@ body{
   justify-content: center;
   align-items: center;
   gap: 2em;
+  margin-top: 3em;
 }
 .container:hover > :not(:hover){
   opacity: 0.5;
@@ -44,3 +44,24 @@ body{
   transition: all 0.3s ease-in-out;
 }
 
+.page-header{
+  font-family: "Alegreya Sans SC", sans-serif;
+  text-align: center;
+  font-size: 6rem;
+  margin: 0;
+  margin-top: 0.8em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #e6e6e6, #c0c0c0, #f2f2f2, #d9d9d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.page-sub-header{
+  font-family: "Alegreya Sans SC", sans-serif;
+  text-align: center;
+  font-size: 6rem;
+  margin: 0;
+  font-weight: bold;
+  background: linear-gradient(90deg, #e6e6e6, #c0c0c0, #f2f2f2, #d9d9d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -12,6 +12,8 @@ import BstcBg from "./assets/bstc-bg.jpg";
 function App() {
   return(
    <div>
+      <h1 className="page-header">BIOSHOCK</h1>
+      <h2 className="page-sub-header">HUB</h2>
       <div className="container">
         <GameCard gameTitle ="Bioshock" gameArt = {Bs1Art} gameClass ="bs1" bgImage = {Bs1Bg} />
         <GameCard gameTitle ="Bioshock 2" gameArt = {Bs2Art} gameClass ="bs2" bgImage ={Bs2Bg}/>
