@@ -12,18 +12,6 @@ body{
   background-image: url("./assets/test-bg.jpg");
   transition: background-image 0.5s ease-in-out;
 }
-.game-art-img{
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  transition: all 0.3s ease-in-out;
-  border-radius: 15px;
-}
-.game-art-img:hover{
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
 .container{
   width: 100%;
   max-width: 1500px;
@@ -40,10 +28,6 @@ body{
 .container:hover > :not(:hover) > .game-art-img{
   filter: brightness(50%);
 }
-.game-card-container{
-  transition: all 0.3s ease-in-out;
-}
-
 .page-header{
   font-family: "Alegreya Sans SC", sans-serif;
   text-align: center;
@@ -53,6 +37,7 @@ body{
   font-weight: bold;
   background: linear-gradient(90deg, #e6e6e6, #c0c0c0, #f2f2f2, #d9d9d9);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .page-sub-header{
@@ -63,5 +48,6 @@ body{
   font-weight: bold;
   background: linear-gradient(90deg, #e6e6e6, #c0c0c0, #f2f2f2, #d9d9d9);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }

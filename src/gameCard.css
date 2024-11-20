@@ -1,0 +1,17 @@
+
+.game-card-container{
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+.game-art-img{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+  }
+  .game-art-img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  

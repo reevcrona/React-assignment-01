@@ -1,4 +1,5 @@
 import GameCard from "./GameCard";
+
 import Bs1Art from "./assets/bs1-box-art.jpg";
 import Bs2Art from "./assets/bs2-box-art.jpg";
 import BsIArt from "./assets/bsi-box-art.jpg";
@@ -9,20 +10,44 @@ import Bs2Bg from "./assets/bs2-bg.jpg";
 import BsIBg from "./assets/bsI-bg.jpg";
 import BstcBg from "./assets/bstc-bg.jpg";
 
+import MinervasDen from "./assets/minervasDen.png";
+
+import { useState } from "react";
+
+
+
 function App() {
-  return(
-   <div>
-      <h1 className="page-header">BIOSHOCK</h1>
-      <h2 className="page-sub-header">HUB</h2>
-      <div className="container">
-        <GameCard gameTitle ="Bioshock" gameArt = {Bs1Art} gameClass ="bs1" bgImage = {Bs1Bg} />
-        <GameCard gameTitle ="Bioshock 2" gameArt = {Bs2Art} gameClass ="bs2" bgImage ={Bs2Bg}/>
-        <GameCard gameTitle ="Bioshock Infinite" gameArt = {BsIArt} gameClass ="bsI" bgImage ={BsIBg} />
-        <GameCard gameArt = {BstcArt} gameClass ="bstc" bgImage = {BstcBg} />
+  
+  const [selectedGame, setSelectedGame] = useState(null);
+
+
+  const renderStartPage = () => {
+    return (
+      <div>
+        <h1 className="page-header">BIOSHOCK</h1>
+        <h2 className="page-sub-header">HUB</h2>
+        <div className="container">
+          <GameCard gameTitle ="Bioshock" gameArt = {Bs1Art} gameClass ="bs1" bgImage = {Bs1Bg} />
+          <GameCard onClick = {() => setSelectedGame(true)} gameTitle ="Bioshock 2" gameArt = {Bs2Art} gameClass ="bs2" bgImage ={Bs2Bg}/>
+          <GameCard gameTitle ="Bioshock Infinite" gameArt = {BsIArt} gameClass ="bsI" bgImage ={BsIBg} />
+          <GameCard gameArt = {BstcArt} gameClass ="bstc" bgImage = {BstcBg} />
+        </div>
       </div>
+    )
+  }
+  const renderGameOptions = () => {
     
-    </div>
-  )
+    return(
+      <div className="container">
+          <GameCard gameArt = {Bs2Art}/>
+          <GameCard gameArt = {MinervasDen}/>
+      </div>
+      
+    )
+  }
+
+   
+  return selectedGame ? renderGameOptions() : renderStartPage();
 }
 
 export default App
