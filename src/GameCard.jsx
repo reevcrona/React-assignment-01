@@ -6,7 +6,10 @@ import Bs2Dlc from "./assets/minervasDen.png";
 function GameCard(props){
 
     const handleMouseEnter = () => {
-        document.body.style.backgroundImage = `url(${props.bgImage})`
+        if(props.enableMouseEnter){
+            document.body.style.backgroundImage = `url(${props.bgImage})`
+        }
+        
     }
 
     
